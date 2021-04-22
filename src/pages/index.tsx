@@ -9,6 +9,8 @@ import { convertDurationToTimeString } from "../utils/convertDurationToTimeStrin
 
 // importancao de estilos
 import styles from "./home.module.scss";
+import { useContext } from "react";
+import { PlayerContext } from "../contexts/PlayerContext";
 
 // tipagem do episódio
 type Episode = {
@@ -16,7 +18,7 @@ type Episode = {
   title: string;
   thumbnail: string;
   members: string;
-  duration: string;
+  duration: number;
   durationAsString: string;
   url: string;
   publishedAt: string;
@@ -32,6 +34,8 @@ type HomeProps = {
 
 // funcao que mostra tudo na tela
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+  const { play } = useContext(PlayerContext);
+
   return (
     <div className={styles.homePage}>
       <section className={styles.latestEpisodes}>
@@ -58,7 +62,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="botão de play" />
                 </button>
               </li>
