@@ -1,15 +1,19 @@
-import { isThisMinute } from "date-fns";
 import format from "date-fns/format";
 import { ptBR } from "date-fns/locale";
 import parseISO from "date-fns/parseISO";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
 import { api } from "../../services/api";
 import Image from "next/image";
 import Link from "next/link";
 import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
 
 import styles from "./episode.module.scss";
+import {
+  PlayerContext,
+  PlayerContextProvider,
+  usePlayer,
+} from "../../contexts/PlayerContext";
+import Head from "next/head";
 
 // --------------------------- tipagem dos dados
 
@@ -19,7 +23,7 @@ type Episode = {
   title: string;
   thumbnail: string;
   members: string;
-  duration: string;
+  duration: number;
   durationAsString: string;
   url: string;
   publishedAt: string;
@@ -34,8 +38,12 @@ type EpisodeProps = {
 //------------------------ mostrando na tela -------------------------------------
 
 export default function Episode({ episode }: EpisodeProps) {
+  const { play } = usePlayer();
   return (
     <div className={styles.episode}>
+      <Head>
+        <title>{episode.title}</title>
+      </Head>
       <div className={styles.thumbnailContainer}>
         <Link href={"/"}>
           <button type="button">
@@ -50,7 +58,7 @@ export default function Episode({ episode }: EpisodeProps) {
           objectFit="cover"
         />
 
-        <button type="button">
+        <button type="button" onClick={() => play(episode)}>
           <img src="/play.svg" alt="tocar o episódio" />
         </button>
       </div>
