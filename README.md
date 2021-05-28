@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Podcastr
 
-## Getting Started
+> Projeto criado na NLW_5 onde foi criado um podcast com Next.js e React.js.
 
-First, run the development server:
+## 💻 Pré-requisitos
 
-```bash
-npm run dev
-# or
-yarn dev
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+
+- Você instalou a versão mais recente de `<Node ou Yarn / Git>`
+
+- Você tem uma máquina `<Windows / Linux / Mac>`.
+
+## 🚀 Instalando podcastr
+
+Para instalar o podcastr, siga estas etapas:
+
+Linux e macOS:
+
+```
+>$ git clone "url do repositório"
+
+Depois de clonar, abra a pasta em seu editor de código.
+Abra o terminal e digite:
+
+> $ yarn
+> $ yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+digite localhost:3000 em seu navegador para visualizar a aplicação
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Windows:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+>$ git clone "url do repositório"
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Depois de clonar, abra a pasta em seu editor de código.
+Abra o terminal e digite:
 
-## Learn More
+> $ yarn
+> $ yarn start
+```
+digite localhost:3000 em seu navegador para visualizar a aplicação
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[⬆ Voltar ao topo](#Podcastr)<br>
