@@ -26,6 +26,7 @@ Abra o terminal e digite:
 
 > $ yarn
 > $ yarn start
+> $ yarn server
 ```
 
 digite localhost:3000 em seu navegador para visualizar a aplicação
@@ -40,6 +41,7 @@ Abra o terminal e digite:
 
 > $ yarn
 > $ yarn start
+> $ yarn server
 ```
 digite localhost:3000 em seu navegador para visualizar a aplicação
 
